@@ -15,7 +15,7 @@ namespace CNABImporter.Data.Entities
         public Guid ClientId { get; set; }
         public DateTime TransactedAt { get; set; }
         public Guid MerchantId { get; set; }
-        public Guid TransactionTypeId { get; set; }
+        public int TransactionTypeId { get; set; }
 
         [ForeignKey("MerchantId")]
         public Merchant Merchant { get; set; }
