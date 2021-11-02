@@ -13,12 +13,12 @@ namespace CNABImporter.Data.Configurations
             builder.HasData(new TransactionNature
             {
                 Id = 1,
-                Description = "Incoming",
+                Description = "Entrada",
             },
             new TransactionNature
             {
                 Id = 2,
-                Description = "Outcoming"
+                Description = "Saída"
             }
           );
         }
