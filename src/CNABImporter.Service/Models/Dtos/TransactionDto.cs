@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CNABImporter.Service.Dtos
+namespace CNABImporter.Service.Models.Dtos
 {
     public class TransactionDto
     {
