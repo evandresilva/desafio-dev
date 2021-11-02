@@ -9,11 +9,11 @@ namespace CNABImporter.Data.Context
 {
     public class MyContext : DbContext
     {
-        public DbSet<Transaction> TransactionEntities { get; set; }
-        public DbSet<Client> ClientEntities{ get; set; }
-        public DbSet<Card> CardEntities{ get; set; }
-        public DbSet<TransactionType> TransactionTypeEntities{ get; set; }
-        public DbSet<TransactionNature> TransactionNatureEntities{ get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Client> Clients{ get; set; }
+        public DbSet<Card> Cards{ get; set; }
+        public DbSet<TransactionType> TransactionTypes{ get; set; }
+        public DbSet<TransactionNature> TransactionNatures{ get; set; }
         public DbSet<Merchant> Merchants{ get; set; }
 
         public MyContext(DbContextOptions<MyContext> options) : base(options)
@@ -24,7 +24,7 @@ namespace CNABImporter.Data.Context
         {
             modelBuilder.Entity<TransactionType>(new TransactionTypeConfiguration().Configure);
             modelBuilder.Entity<TransactionNature>(new TransactionNatureConfiguration().Configure);
-
+            
             base.OnModelCreating(modelBuilder);
         }
 
