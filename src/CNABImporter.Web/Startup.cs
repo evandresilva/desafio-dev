@@ -31,7 +31,7 @@ namespace CNABImporter.Web
         {
 
             services.AddDbContext<MyContext>(options =>
-               options.UseSqlServer(Configuration.GetConnectionString("Conn2"))
+               options.UseSqlServer(Configuration.GetConnectionString("Conn"))
            );
 
             services.AddControllers();
