@@ -10,7 +10,7 @@ namespace CNABImporter.Data.Entities
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public new int Id { get; set; }
-        [MaxLength(16)]
+        [MaxLength(32)]
         public string Description { get; set; }
         public int TransactionNatureId { get; set; }
 
