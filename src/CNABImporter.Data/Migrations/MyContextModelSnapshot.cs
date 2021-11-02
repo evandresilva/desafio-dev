@@ -199,66 +199,101 @@ namespace CNABImporter.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2021, 11, 2, 12, 9, 52, 188, DateTimeKind.Utc).AddTicks(6498),
+                            CreatedAt = new DateTime(2021, 11, 2, 17, 37, 5, 505, DateTimeKind.Utc).AddTicks(1677),
                             Description = "Débito",
                             TransactionNatureId = 1
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2021, 11, 2, 12, 9, 52, 188, DateTimeKind.Utc).AddTicks(7917),
+                            CreatedAt = new DateTime(2021, 11, 2, 17, 37, 5, 505, DateTimeKind.Utc).AddTicks(3110),
                             Description = "Boleto",
                             TransactionNatureId = 2
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2021, 11, 2, 12, 9, 52, 188, DateTimeKind.Utc).AddTicks(7955),
+                            CreatedAt = new DateTime(2021, 11, 2, 17, 37, 5, 505, DateTimeKind.Utc).AddTicks(3142),
                             Description = "Financiamento",
                             TransactionNatureId = 2
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2021, 11, 2, 12, 9, 52, 188, DateTimeKind.Utc).AddTicks(7957),
+                            CreatedAt = new DateTime(2021, 11, 2, 17, 37, 5, 505, DateTimeKind.Utc).AddTicks(3144),
                             Description = "Crédito",
                             TransactionNatureId = 1
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2021, 11, 2, 12, 9, 52, 188, DateTimeKind.Utc).AddTicks(7959),
+                            CreatedAt = new DateTime(2021, 11, 2, 17, 37, 5, 505, DateTimeKind.Utc).AddTicks(3145),
                             Description = "Recebimento Empréstimo",
                             TransactionNatureId = 1
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2021, 11, 2, 12, 9, 52, 188, DateTimeKind.Utc).AddTicks(7960),
+                            CreatedAt = new DateTime(2021, 11, 2, 17, 37, 5, 505, DateTimeKind.Utc).AddTicks(3147),
                             Description = "Vendas",
                             TransactionNatureId = 1
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2021, 11, 2, 12, 9, 52, 188, DateTimeKind.Utc).AddTicks(7962),
+                            CreatedAt = new DateTime(2021, 11, 2, 17, 37, 5, 505, DateTimeKind.Utc).AddTicks(3148),
                             Description = "Recebimento TED",
                             TransactionNatureId = 1
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2021, 11, 2, 12, 9, 52, 188, DateTimeKind.Utc).AddTicks(7963),
+                            CreatedAt = new DateTime(2021, 11, 2, 17, 37, 5, 505, DateTimeKind.Utc).AddTicks(3150),
                             Description = "Recebimento DOC",
                             TransactionNatureId = 1
                         },
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2021, 11, 2, 12, 9, 52, 188, DateTimeKind.Utc).AddTicks(7965),
+                            CreatedAt = new DateTime(2021, 11, 2, 17, 37, 5, 505, DateTimeKind.Utc).AddTicks(3151),
                             Description = "Aluguel",
                             TransactionNatureId = 2
                         });
+                });
+
+            modelBuilder.Entity("CNABImporter.Data.Entities.User", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Username")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("CNABImporter.Data.Entities.Transaction", b =>
